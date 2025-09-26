@@ -35,7 +35,6 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("the force is:" + force);
         x = transform.position.x;
         y = transform.position.y;
         mg = rb.mass * Physics2D.gravity;

@@ -35,7 +35,9 @@ public class missile_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dircetion_to_interception_position = Mathf.Atan2(interceptionposition.x - transform.position.x, interceptionposition.y - transform.position.y);
+        interceptionposition.x = script.transform.position.x;
+        interceptionposition.y = script.transform.position.y;
+        dircetion_to_interception_position = Mathf.Atan2(interceptionposition.y - transform.position.y, interceptionposition.x - transform.position.x) * Mathf.Rad2Deg;
         if (script.v.y < 0)
         {
             rb.AddForce(transform.up * 3000);
