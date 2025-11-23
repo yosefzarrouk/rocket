@@ -9,9 +9,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
-    <ProjectGuid>{4BFE3EBA-2CD9-02DC-3E9C-5E40A69BE608}</ProjectGuid>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{100342F8-27D2-E212-F36D-9E088A66CFF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,11 +61,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\launch_rocket.cs" />
     <Compile Include="Assets\rocket_movement.cs" />
     <Compile Include="Assets\aspectratio.cs" />
+    <Compile Include="Assets\circle_script.cs" />
     <Compile Include="Assets\missile_movement.cs" />
     <Compile Include="Assets\launch.cs" />
+    <Compile Include="Assets\missile_movemnt2.cs" />
     <Compile Include="Assets\force.cs" />
+    <Compile Include="Assets\launch_missiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
