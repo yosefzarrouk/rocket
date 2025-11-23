@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1309768580430011309
+--- !u!1 &2670820277306701818
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1785247324952179522}
-  - component: {fileID: 4933630426065899371}
+  - component: {fileID: 6622667422826848744}
+  - component: {fileID: 7192995037639193607}
+  - component: {fileID: 8595833697104125673}
+  - component: {fileID: 3840000301075858300}
   m_Layer: 0
-  m_Name: image (1)_0
+  m_Name: interceptor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1785247324952179522
+--- !u!4 &6622667422826848744
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309768580430011309}
+  m_GameObject: {fileID: 2670820277306701818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 5000796543335583078}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4933630426065899371
+--- !u!212 &7192995037639193607
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309768580430011309}
+  m_GameObject: {fileID: 2670820277306701818}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,74 +89,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &7329049078158596695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5000796543335583078}
-  - component: {fileID: 2521185297115280385}
-  - component: {fileID: 667095518047890533}
-  m_Layer: 0
-  m_Name: rocket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5000796543335583078
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7329049078158596695}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1785247324952179522}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2521185297115280385
+--- !u!114 &8595833697104125673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7329049078158596695}
+  m_GameObject: {fileID: 2670820277306701818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1e47aced8c1944e9ff63ab5b6ac1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: d52d9897d9237274cbbeee37b04034b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 667095518047890533}
-  startingXposition: 650
-  starting_direction: 120
-  launch_force: 15000
-  calculated_rocket_direction: 0
-  rocket_final_speed: 100
+  rb: {fileID: 3840000301075858300}
+  index: 0
+  interception_position: {x: 0, y: 0}
+  rocket_position: {x: 0, y: 0}
+  rising_force: 0
+  rising_max_height: 0
+  max_force: 0
+  rotation_force: 0
+  time_for_interception: 0
+  distance_to_interception_position: 0
+  distance_to_rocket: 0
+  missile_direction: 0
+  direction_to_interception: 0
+  needed_force: 0
+  startingXPosition: 0
+  direction_to_rocket: 0
   flight_stage: 0
---- !u!50 &667095518047890533
+  interception_position_side: 0
+  starting_interception_position_side: 0
+  rocket_side: 0
+--- !u!50 &3840000301075858300
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7329049078158596695}
+  m_GameObject: {fileID: 2670820277306701818}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 800
   m_LinearDamping: 0
-  m_AngularDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
